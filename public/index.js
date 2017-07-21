@@ -17,7 +17,7 @@
       sysex: false
     }).then(onMIDISuccess, onMIDIFailure);
   } else {
-    console.warn("No MIDI support in your browser")
+    console.warn("No MIDI support in your browser");
   }
 
   // on success
@@ -42,7 +42,7 @@
       on: d[0],
       pitch: d[1],
       velocity: d[2]
-    }
+    };
     socket.emit('midi', data);
 
     // render data in window
@@ -71,7 +71,7 @@
         msg.data.push(data.on);
         msg.data.push(data.pitch);
         msg.data.push(data.velocity);
-    updateKeyboard(msg);
+    updateKeyboard(data);
   }
 
   // midi note player
