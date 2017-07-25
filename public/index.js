@@ -90,7 +90,7 @@
       var vol = (velocity / 127).toFixed(2);
 
       var osc = oscillators[frequency] = context.createOscillator();
-          osc.type = 'sawtooth';
+          osc.type = 'sine';
           osc.frequency.value = frequency;
           osc.setVolume = vol;
           osc.connect(context.destination);
